@@ -6,7 +6,6 @@ control.onEvent(EventBusSource.MICROBIT_ID_IO_P16, EventBusValue.MICROBIT_PIN_EV
 })
 input.onButtonPressed(Button.A, function () {
     basic.showString("A")
-    music.playTone(262, music.beat(BeatFraction.Whole))
 })
 control.onEvent(EventBusSource.MICROBIT_ID_IO_P8, EventBusValue.MICROBIT_PIN_EVT_FALL, function () {
     basic.showNumber(8)
@@ -44,9 +43,6 @@ input.onGesture(Gesture.Shake, function () {
 })
 control.onEvent(EventBusSource.MICROBIT_ID_IO_P12, EventBusValue.MICROBIT_PIN_EVT_FALL, function () {
     basic.showNumber(12)
-})
-input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    basic.showIcon(IconNames.Ghost)
 })
 basic.showIcon(IconNames.Heart)
 pins.setPull(DigitalPin.P16, PinPullMode.PullUp)
